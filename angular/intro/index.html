@@ -7,6 +7,13 @@
 <body>
 	<div ng-controller="helloController">
 		<span>{{ data.message }}</span>
+
+		<ul>
+			<!-- ng-repeat is a directive -->
+			<li ng-repeat="info in data.info">
+				<span><b>{{ info.title }}: </b>{{ info.value }}</span>
+			</li>
+		</ul>
 	</div>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
