@@ -10,8 +10,9 @@
 
 		<ul>
 			<!-- ng-repeat is a directive -->
-			<li ng-repeat="info in data.info">
-				<span><b>{{ info.title }}: </b>{{ info.value }}</span>
+			<!-- added orderBy: title filter to order values -->
+			<li ng-repeat="info in data.info | orderBy: 'title' ">
+				<span><b>{{ info.title }}: </b>{{ info.value | addYears }}</span>
 			</li>
 		</ul>
 	</div>
@@ -19,4 +20,5 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 <script src="app/main.js"></script>
 <script src="app/controllers/introControllers.js"></script>
+<script src="app/filters/introFilters.js"></script>
 </html>
