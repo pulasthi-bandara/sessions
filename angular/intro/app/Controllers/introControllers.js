@@ -5,7 +5,7 @@ angular.module('introControllers', []);
 var introControllers = angular.module('introControllers');
 
 // a Controller
-introControllers.controller('helloController', function($scope){
+introControllers.controller('helloController', ['$scope', function($scope){
 	$scope.data = [];
 
 	$scope.data.message = 'Hello World';
@@ -15,4 +15,4 @@ introControllers.controller('helloController', function($scope){
 		{ title: 'Last Name', value: 'Doe' },
 		{ title: 'Age', value: '20'}
 	];
-});
+}]);
